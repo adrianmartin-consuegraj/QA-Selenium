@@ -28,7 +28,9 @@ public class BrokenLinks {
 		// iterate the List searching the attribute "href" in those elements that you've already stored in the List
 		// and send them, one by one, to the 'verifyLink' method
 		for (WebElement l : links) {
+			
 			verifyLink(l.getAttribute("href"));	
+			
 		}
 		
 	}
@@ -39,6 +41,7 @@ public class BrokenLinks {
 		pos++;
 		
 		try {
+			
 			// try to connect to the URL opening the connection 
 			URL u = new URL(url);
 			HttpURLConnection conn = (HttpURLConnection) u.openConnection();
@@ -46,9 +49,11 @@ public class BrokenLinks {
 			conn.connect();
 			
 		} catch (IOException e) {
+			
 			// if there's any error trying to get access to the website, 
 			// then you print the position of the website in the list and the url of the website
 			System.out.println("Position," + pos + " URL: " + url);
+			
 		}
 		
 	}
