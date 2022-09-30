@@ -19,7 +19,7 @@ public class BrokenLinks {
 		
 		// load the file from our computer
 		WebDriver driver = new ChromeDriver();
-		driver.get("file:///C:/Users/Adrian.Martin/eclipse-workspace/SeleniumCases/cases/brokenLinks.html");
+		driver.get("C:\\Users\\Adrian.Martin\\eclipse-workspace\\QA-Selenium\\resources\\brokenLinks.html");
 		driver.manage().window().minimize();
 		
 		// store the elements which contains an "a" tag
@@ -34,7 +34,6 @@ public class BrokenLinks {
 		}
 		
 	}
-	
 	
 	public static void verifyLink(String url) {
 		
@@ -52,7 +51,7 @@ public class BrokenLinks {
 			
 			// if there's any error trying to get access to the website, 
 			// then you print the position of the website in the list and the url of the website
-			System.out.println("Position," + pos + " URL: " + url);
+			System.out.println("Position " + pos + ", URL: " + url);
 			
 		}
 		
